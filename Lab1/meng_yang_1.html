@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>meng-yang-1</title>
+	<style type="text/css">
+		body {
+			margin: 0px;
+		}
+		h1 {color: white; 
+			background-color: black;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		li:hover {
+			background-color: black;
+			color: white;
+			cursor: pointer;
+
+		}
+
+		#contents {
+			padding: 10px;
+
+		}
+
+
+
+	</style>
+</head>
+
+<body>
+	<h1>Gapiminder - Wealth and Health of Nations </h1>
+
+	<div id="contents">
+		<h2 style="font-weight: bold">Countries</h2>
+		<label>Name: </label>
+		<input type="text" id = "textInput" >
+		<button onclick="addCountries();">add</button>
+		<hr>
+	
+		<ul id ="log">
+			<li>USA</li>
+		</ul>
+
+	</div>
+
+
+</body>
+
+<script>
+	function addCountries() {
+		
+		var newCountry = document.getElementById("textInput").value;
+		
+
+		var log = document.getElementById("log");
+		var newEntry = document.createElement("li");
+		newEntry.innerHTML = newCountry;
+		log.appendChild(newEntry);
+
+	}
+	
+</script>
+
+</html>
